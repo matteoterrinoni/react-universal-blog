@@ -45,6 +45,7 @@ export default class BlogList extends Component {
             <h2 className="post-title pointer">
               <Link to={ '/blog/' + article.slug } onClick={ this.scrollTop }>{ article.title }</Link>
             </h2>
+            <div dangerouslySetInnerHTML={ {__html: article.content } }></div>
             <p className="post-meta">Posted by <a href="https://cosmicjs.com" target="_blank">Cosmic JS</a> on { created }</p>
           </div>
           <hr/>
